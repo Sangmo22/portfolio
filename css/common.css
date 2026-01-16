@@ -1,0 +1,22 @@
+.section {
+  margin-top: 100px;
+  padding: 15px;
+}
+.section_title {
+  font-family: "Playfair Display", serif;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: #1a1a1a;
+  margin-bottom: 15px;
+}
+.section_subtitle {
+  font-size: 18px;
+  font-family: "Playfair Display", serif;
+  text-transform: uppercase;
+  margin-bottom: 75px;
+  letter-spacing: 5px;
+  line-height: 1.8;
+  font-weight: 700;
+}
