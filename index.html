@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -25,17 +25,44 @@
     <link rel="stylesheet" href="css/skill.css" />
     <link rel="stylesheet" href="css/about.css" />
     <link rel="stylesheet" href="css/sidebar.css" />
+    <link rel="stylesheet" href="css/work-count.css" />
+    <link rel="stylesheet" href="css/contact.css" />
   </head>
   <body>
     <nav class="sidebar">
-      <i id="hamburger" class="fa-solid fa-bars sidebar_hamburger"></i>
-      <div class="sidebar_content">
-        <ul>
-          <li><a href="#hero">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-        </ul>
-      </div>
+      <nav class="sidebar">
+        <i id="hamburger" class="fa-solid fa-bars sidebar__hamburger"></i>
+
+        <div class="sidebar__content">
+          <img
+            class="sidebar__image"
+            src="images/sangmolama.jpeg"
+            alt="Profile Image"
+          />
+          <h1 class="sidebar__name">Sangmo Lama</h1>
+          <h2 class="sidebar__job">Developer <span>in Nepal</span></h2>
+
+          <ul class="sidebar__list">
+            <li class="sidebar__list__item">
+              <a href="#hero">home</a>
+            </li>
+            <li class="sidebar__list__item">
+              <a href="#about">about</a>
+            </li>
+            <li class="sidebar__list__item">
+              <a href="#skills">skills</a>
+            </li>
+            <li class="sidebar__list__item">
+              <a href="#contact">contact</a>
+            </li>
+          </ul>
+
+          <p class="sidebar__copyright">
+            &copy; 2024 All rights reserved | Made with &#128150; by
+            <span>Sangmo</span>
+          </p>
+        </div>
+      </nav>
     </nav>
     <section id="hero">
       <h1>Hi! <br />I am Sangmo <br />I am a Developer</h1>
@@ -46,38 +73,49 @@
     <section id="about" class="section">
       <p class="section_title">About Me</p>
       <p class="section_subtitle">My Introduction</p>
-      <p class="about_description">
+      <p class="about__description">
         <strong>Hello, I am sangmo lama</strong>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis
-        voluptate quaerat et suscipit dolorem dolor ea molestias est,
-        voluptatem, minima culpa facere dolores dolorum nesciunt. Esse assumenda
-        illum inventore vitae. Lorem ipsum dolor, sit amet consectetur
-        adipisicing elit. Perspiciatis, eaque cupiditate itaque ipsam ab libero
-        amet sapiente impedit molestiae praesentium quidem? Itaque possimus
-        impedit, est sit doloremque nam exercitationem rerum.
+        a Electronics Communication and Information Engineering student with a
+        strong interest in frontend development, full-stack web development, and
+        machine learning. I enjoy turning ideas into real, interactive
+        experiences through code and design.
       </p>
-      <div class="about_skills">
-        <div>
+      <p class="about__description">
+        I've worked on projects involving web development, IoT concepts,
+        AI-based systems, and creative animations, and I genuinely enjoy coding
+        for both the logic and the creativity it offers. I'm currently learning
+        Python and WordPress, while continuously improving my skills in modern
+        web technologies.
+      </p>
+      <p class="about__description">
+        Beyond coding, I'm a creative person who enjoys drawing, singing,
+        dancing, and crocheting, which helps me bring a unique and imaginative
+        perspective to my technical work. I'm always eager to learn, build
+        meaningful projects, and grow as a developer by solving real-world
+        problems.
+      </p>
+      <div class="about__skills">
+        <div class="about__box">
           <i class="fa-solid fa-ear-listen"></i>
           <h3>Web Development</h3>
         </div>
-        <div>
+        <div class="about__box">
           <i class="fa-solid fa-globe"></i>
           <h3>Web Design</h3>
         </div>
-        <div>
+        <div class="about__box">
           <i class="fa-solid fa-database"></i>
           <h3>Machine Learning</h3>
         </div>
-        <div>
+        <div class="about__box">
           <i class="fa-solid fa-mobile"></i>
           <h3>Mobile Application</h3>
         </div>
       </div>
     </section>
     <section id="skills" class="section">
-      <p class="section_title">My Speciality</p>
-      <p class="section_subtitle">My Skills</p>
+      <p class="section__title">My Speciality</p>
+      <p class="section__subtitle">My Skills</p>
       <div class="outer_box">
         <div class="skill_box">
           <p>HTML</p>
@@ -141,10 +179,38 @@
         </div>
       </div>
     </section>
+    <section id="contact" class="section">
+      <span class="section__title">get in touch</span>
+      <h2 class="section__subtitle">contact</h2>
+
+      <form
+        action=""
+        id="contactForm"
+        class="contact__form"
+        onsubmit="submitForm(event)"
+      >
+        <input
+          type="text"
+          placeholder="Name"
+          id="name"
+          name="name"
+          class="contact__input"
+        />
+        <textarea
+          id="message"
+          class="contact__textarea"
+          name="message"
+          placeholder="Message"
+          rows="4"
+        ></textarea>
+        <button class="contact__button" type="submit">Send Message</button>
+      </form>
+    </section>
+
     <script>
       const hamburger = document.querySelector("#hamburger");
       hamburger.addEventListener("click", () => {
-        hamburger.classList.toggle("sidebar_hamburger_translate");
+        hamburger.classList.toggle("sidebar__hamburger__translate");
       });
     </script>
   </body>
