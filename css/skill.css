@@ -23,10 +23,19 @@
   color: black;
   font-family: "Playfair Display", serif;
 }
-.skill_box {
-  margin-bottom: 20px;
+
+.outer_box {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px 30px;
 }
-.skill_box > p {
+
+.skill__box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.skill__box > p {
   color: black;
   margin-bottom: 15px;
 }
@@ -47,9 +56,7 @@
   top: -22px;
 }
 @media screen and (min-width: 768px) {
-  .skill__box {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
+  .outer_box {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
