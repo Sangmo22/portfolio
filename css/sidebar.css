@@ -11,6 +11,7 @@
 
 .sidebar__hamburger__translate {
   transform: translateX(300px);
+  position: fixed;
 }
 
 .sidebar__content {
